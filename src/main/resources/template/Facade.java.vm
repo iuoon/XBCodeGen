@@ -1,0 +1,14 @@
+package ${package}.${moduleName}.facade;
+
+/**
+ * ${comments}
+ *
+ * @author ${author}
+ * @email ${email}
+ * @date ${datetime}
+ */
+public interface ${className}Facade {
+
+    void saveAndUpdate(${className} ${classname});
+
+}

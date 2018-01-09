@@ -1,0 +1,32 @@
+package ${package}.${moduleName}.facade.impl;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+
+import ${package}.${moduleName}.dao.${className}Dao;
+import ${package}.${moduleName}.entity.${className};
+import ${package}.${moduleName}.service.${className}Service;
+
+
+
+@Service("${classname}Facade")
+public class ${className}FacadeImpl implements ${className}Facade {
+	@Autowired
+	private ${className}Service ${classname}Service;
+	
+
+	@Override
+	public void saveAndUpdate(${className} ${classname}){
+		if (${classname}==null){
+		    return;
+        }
+        if (${classname}.getXid()!=null){
+			${classname}Service.update(${classname});
+        }else{
+			${classname}Service.save(${classname});
+        }
+	}
+	
+
+}
